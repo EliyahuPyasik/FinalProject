@@ -1,0 +1,3 @@
+﻿  FinalProject2.cpp
+C:\Users\Eliya\source\repos\FinalProject2\FinalProject2\FinalProject2.cpp(225,77): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  FinalProject2.vcxproj -> C:\Users\Eliya\source\repos\FinalProject2\FinalProject2\x64\Debug\FinalProject2.exe
