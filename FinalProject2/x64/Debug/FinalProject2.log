@@ -1,0 +1,26 @@
+﻿  FinalProject2.cpp
+C:\Users\Eliya\source\repos\FinalProject2\FinalProject2\FinalProject2.cpp(174,47): warning C4244: 'argument': conversion from 'const _Ty2' to '_Ty', possible loss of data
+C:\Users\Eliya\source\repos\FinalProject2\FinalProject2\FinalProject2.cpp(174,47): warning C4244:         with
+C:\Users\Eliya\source\repos\FinalProject2\FinalProject2\FinalProject2.cpp(174,47): warning C4244:         [
+C:\Users\Eliya\source\repos\FinalProject2\FinalProject2\FinalProject2.cpp(174,47): warning C4244:             _Ty2=double
+C:\Users\Eliya\source\repos\FinalProject2\FinalProject2\FinalProject2.cpp(174,47): warning C4244:         ]
+C:\Users\Eliya\source\repos\FinalProject2\FinalProject2\FinalProject2.cpp(174,47): warning C4244:         and
+C:\Users\Eliya\source\repos\FinalProject2\FinalProject2\FinalProject2.cpp(174,47): warning C4244:         [
+C:\Users\Eliya\source\repos\FinalProject2\FinalProject2\FinalProject2.cpp(174,47): warning C4244:             _Ty=float
+C:\Users\Eliya\source\repos\FinalProject2\FinalProject2\FinalProject2.cpp(174,47): warning C4244:         ]
+C:\Users\Eliya\source\repos\FinalProject2\FinalProject2\FinalProject2.cpp(327,48): warning C4244: 'argument': conversion from 'const _Ty2' to '_Ty', possible loss of data
+C:\Users\Eliya\source\repos\FinalProject2\FinalProject2\FinalProject2.cpp(327,48): warning C4244:         with
+C:\Users\Eliya\source\repos\FinalProject2\FinalProject2\FinalProject2.cpp(327,48): warning C4244:         [
+C:\Users\Eliya\source\repos\FinalProject2\FinalProject2\FinalProject2.cpp(327,48): warning C4244:             _Ty2=double
+C:\Users\Eliya\source\repos\FinalProject2\FinalProject2\FinalProject2.cpp(327,48): warning C4244:         ]
+C:\Users\Eliya\source\repos\FinalProject2\FinalProject2\FinalProject2.cpp(327,48): warning C4244:         and
+C:\Users\Eliya\source\repos\FinalProject2\FinalProject2\FinalProject2.cpp(327,48): warning C4244:         [
+C:\Users\Eliya\source\repos\FinalProject2\FinalProject2\FinalProject2.cpp(327,48): warning C4244:             _Ty=float
+C:\Users\Eliya\source\repos\FinalProject2\FinalProject2\FinalProject2.cpp(327,48): warning C4244:         ]
+C:\Users\Eliya\source\repos\FinalProject2\FinalProject2\FinalProject2.cpp(462,44): warning C4244: '=': conversion from 'size_t' to '_Ty', possible loss of data
+C:\Users\Eliya\source\repos\FinalProject2\FinalProject2\FinalProject2.cpp(462,44): warning C4244:         with
+C:\Users\Eliya\source\repos\FinalProject2\FinalProject2\FinalProject2.cpp(462,44): warning C4244:         [
+C:\Users\Eliya\source\repos\FinalProject2\FinalProject2\FinalProject2.cpp(462,44): warning C4244:             _Ty=double
+C:\Users\Eliya\source\repos\FinalProject2\FinalProject2\FinalProject2.cpp(462,44): warning C4244:         ]
+C:\Users\Eliya\source\repos\FinalProject2\FinalProject2\FinalProject2.cpp(490,92): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  FinalProject2.vcxproj -> C:\Users\Eliya\source\repos\FinalProject2\x64\Debug\FinalProject2.exe

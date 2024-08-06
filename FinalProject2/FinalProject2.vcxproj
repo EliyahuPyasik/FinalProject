@@ -142,13 +142,19 @@
     <ClCompile Include="imgui-master\imgui-master\imgui_draw.cpp" />
     <ClCompile Include="imgui-master\imgui-master\imgui_tables.cpp" />
     <ClCompile Include="imgui-master\imgui-master\imgui_widgets.cpp" />
+    <ClCompile Include="implot.cpp" />
+    <ClCompile Include="implot_items.cpp" />
     <ClCompile Include="serverHandler.cpp" />
+    <ClCompile Include="stb_image.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="imgui-master\imgui-master\backends\imgui_impl_dx9.h" />
     <ClInclude Include="imgui-master\imgui-master\backends\imgui_impl_win32.h" />
     <ClInclude Include="imgui-master\imgui-master\imgui.h" />
+    <ClInclude Include="implot.h" />
+    <ClInclude Include="implot_internal.h" />
     <ClInclude Include="serverHandler.h" />
+    <ClInclude Include="stb_image.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets" />

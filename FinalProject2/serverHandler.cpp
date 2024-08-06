@@ -3,7 +3,9 @@
 #include <iomanip>
 
 namespace serverHandler {
-
+    std::vector<string> getDurations() {
+        return { "days", "weeks", "months", "years" };
+    }
     // Helper function to adjust the date backward by a certain number of days
     void adjustDate(int& year, int& month, int& day, int daysToSubtract) {
         static const int daysInMonth[12] = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
@@ -107,11 +109,18 @@ namespace serverHandler {
 
         // Helper function to add entry to the map
         auto addEntry = [&](int y, int m, int d) {
-            string json = getCurrencyInfo(y, m, d, mainCurrency)->body;
+            double secCurrencyValue;
             string formattedDate = formatDate(y, m, d);
-            double secCurrencyValue = getValueFromJson(json, secCurrency);
-            dateRateMap[formattedDate] = secCurrencyValue;
-            };
+            if (mainCurrency == secCurrency) {
+                dateRateMap[formattedDate] = 1;
+            }
+            else {
+                string json = getCurrencyInfo(y, m, d, mainCurrency)->body;
+                string formattedDate = formatDate(y, m, d);
+                secCurrencyValue = getValueFromJson(json, secCurrency);
+                dateRateMap[formattedDate] = secCurrencyValue;
+            }
+        };
 
         // Always include the current date
         addEntry(year, month, day);
@@ -182,6 +191,39 @@ namespace serverHandler {
         }
 
         return dateRateMap;
+    }
+
+    std::vector<std::string> getCurrencyCodes() {
+        string json = getCurrencyInfo(2000, 0, 1, "ils")->body;
+        std::vector<std::string> currencyCodes;
+        std::string searchKey = "\"ils\":";
+        size_t startPos = json.find(searchKey);
+
+        if (startPos == std::string::npos) {
+            std::cerr << "ILS section not found in the JSON." << std::endl;
+            return currencyCodes;
+        }
+
+        size_t startBracket = json.find('{', startPos);
+        size_t endBracket = json.find('}', startBracket);
+
+        if (startBracket == std::string::npos || endBracket == std::string::npos) {
+            std::cerr << "Malformed JSON in ILS section." << std::endl;
+            return currencyCodes;
+        }
+
+        std::string ilsSection = json.substr(startBracket + 1, endBracket - startBracket - 1);
+        size_t pos = 0;
+        while ((pos = ilsSection.find('"', pos)) != std::string::npos) {
+            size_t endPos = ilsSection.find('"', pos + 1);
+            if (endPos == std::string::npos) break;
+
+            std::string currencyCode = ilsSection.substr(pos + 1, endPos - pos - 1);
+            currencyCodes.push_back(currencyCode);
+            pos = endPos + 1;
+        }
+
+        return currencyCodes;
     }
 
 } // namespace serverHandler
